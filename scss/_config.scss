@@ -1,4 +1,4 @@
-$primary-color: #444;
+$primary-color: #333;
 $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url(https://images.pexels.com/photos/214221/pexels-photo-214221.jpeg?cs=srgb&dl=codes-computer-electronics-214221.jpg&fm=jpg);
@@ -25,6 +25,15 @@ $background-opacity: 0.8;
         background: rgba($primary-color, $background-opacity);
       }
     }
+  }
+}
+
+//SET TEXT COLOR
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
   }
 }
 
